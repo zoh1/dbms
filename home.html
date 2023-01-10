@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+ * {
+        margin: 0;
+        padding: 0;
+ }
+
+body {
+        opacity: 1;
+        background-color:  rgb(9, 4, 15);  
+}
+.container {
+    overflow: hidden;
+    position: relative;
+}
+header{
+	background-image: url(image2.jpg);
+	height: 780px;
+	background-size: 100% 100%;
+	background-position: center;
+	position: relative;
+}	
+.bar {
+        overflow: hidden;
+        background-color: transparent;
+        float: right; 
+       
+        
+}
+.bar a {
+        float: left;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: inherit;
+}
+.bar a:hover {
+        background: #fff;
+        color:  #201831;
+        transition: 0.2s ease;
+}
+.dd {
+        float: left;
+        overflow: hidden;
+        font-size: 18px; 
+        
+}
+.dd .db {
+        font-size: 20px;  
+        border: none;
+        outline: none;
+        color: white;
+        cursor: pointer;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+
+}
+.bar a:hover, .dd:hover .db {
+        background-color: white;
+        background:#fff;
+        color: #000;
+        transition: 0.2s ease; 
+}
+.ddc {
+        display: none;
+        position: absolute;
+        background-color:transparent;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+        z-index: 1;
+}
+.ddc a {
+        float: none;
+        color: #fff;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+}
+.dd:hover .ddc{
+        display: block; 
+}
+.logo img{
+	width: 60px;
+	float: left;
+	height: 60px;
+	border: 5px solid #201831;
+        cursor: pointer;
+        margin: 5px;
+        
+}
+.message {
+        margin-top: 15%;
+        color: #000;
+        font-family: serif;
+        font-size: 25px;
+        text-align: center;
+}
+.mb{
+        width: 200px;
+        padding: 15px 0;
+        text-align: center;
+        margin: 20px 10px;
+        font-weight: bold;
+        border: 2px solid #201831;
+        background: transparent;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 24px;
+        
+}
+.mb a{
+        text-decoration: none;
+        background: transparent;
+        color:#000;
+}
+
+.mb:hover{
+        background-color: #fff;
+        color: transparent;
+        transition: 0.2s ease; 
+}
+h1{
+        text-align: center;
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: #fff;
+        padding-bottom: 10px;
+        font-size: 80px;
+}
+.team{
+        display: inline-flex;
+        text-align: center;
+        width: auto;
+        justify-content: center;
+        font-family: Goudy Old Style;
+        
+        
+}
+.team .teammem{
+        background: white;
+        border: 2px solid#201831;
+        margin: 15px;
+        margin-bottom: 70px;
+        width: 300px;
+        padding: 15px;
+        line-height: 24px;
+        color: #000;
+        position: relative;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        
+}
+h4{
+        font-size: 25px;
+        
+        color: white
+        
+}
+.team .teammem h3{
+        font-size: 30px;
+}
+.team .teammem h3:hover{
+        color: thistle;
+        transition: 0.2s ease; 
+}
+.team .teammem p.role{
+        color: #F0FFF0;
+        font-size: 20px;
+        text-transform: uppercase;
+        margin: 12px 0;
+}
+.teammem:hover{
+        background-color:#201831;
+        background: #201831;
+        color: thistle;
+        transition: 0.2s ease; 
+}
+.teammem {
+        height: 50px;
+}
+
+.prnt {
+        text-align: center;
+}
+.ser{
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Goudy Old Style;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        
+}
+.ser .bx{
+        position: relative;
+        width: 350px;
+        padding: 50px;
+        background: #fff;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        height: 340px;
+        border-radius: 240px;
+        margin: 20px;
+        border: 7px solid #fff;
+        overflow: hidden;
+        text-align: center;
+}
+.ser .bx:before{
+        content: '';
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        background: rgb(255,255,255,.1);
+        
+}
+.ser .bx .icon{
+        position: relative;
+        width: 80px;
+        height: 80px;
+        color: #fff;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        border-radius: 50%;
+        font-size: 40px;
+        font-weight: 700;
+        transition: 1s;
+}
+.ser .bx:nth-child(1) .icon{
+        box-shadow: 0 0 0 #201831;
+        background: #201831;
+}
+.ser .bx:nth-child(1):hover .icon{
+        box-shadow: 0 0 25px 375px #201831;
+    
+}
+.ser .bx .cont{
+        position: relative;
+        z-index: 1;
+        transition: 0.5s;
+}
+.ser .bx:hover .cont{
+        color: #fff;
+}
+.ser .bx .cont h3{
+        font-size: 30px;
+        margin: 10px 0;
+        padding: 0;
+}
+.ser .bx .cont p{
+        margin: 0;
+        padding: 0;
+    }
+h5{
+        font-size: 30px;
+        color: #fff;
+}
+.are{
+        display: inline-block;
+        padding: 10px 10px;
+        background: #fff;
+        border-radius: 24px;
+        text-decoration: none;
+        color: #000;
+        cursor: pointer;
+        border: 1px solid black;
+        font-weight: 500;
+        margin-top: 20px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+.are:hover{
+    background-color: thistle;
+    color: #201831;
+    
+} 
+.ser2{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Goudy Old Style;
+    flex-wrap: wrap;
+   
+}
+.ser2 .box{
+    position: relative;
+    width: 350px;
+    padding: 50px;
+    background: #201831;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    
+    border-radius: 35px;
+    margin: 20px;
+    height: 340px;
+    overflow: hidden;
+    text-align: center;
+}
+.ser2 .box:before{
+    content: '';
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    background: rgb(255,255,255,.1);
+    z-index: 2;
+}
+.ser2 .box .icon{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    background: #201831;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    font-size: 40px;
+    font-weight: 700;
+    transition: 1s;
+}
+
+.ser2 .box .cont{
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    transition: 0.5s;
+}
+.ser2 .box:hover .cont{
+    color: thistle;
+}
+.ser2 .box .cont h3{
+    font-size: 30px;
+    margin: 10px 0;
+    padding: 0;
+}
+.ser2 .box .cont p{
+    margin: 0;
+    padding: 0;
+}
+</style>
+    <meta charset="utf-8">
+        <title >SIZO TELECOMMUNICATIONS</title>
+</head>
+<body>
+<header>
+	<div class="container">
+          <div class="logo">
+                <a href="home.html">
+                        <img src="logo1.svg">
+                </a>
+          </div>
+	    <div class="bar">
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <div class="dd">
+                <button class="db">LOGIN</button>
+            <div class="ddc">
+                <a href="local.PHP">Customer Login</a>
+                <a href="comp.php">Company Login</a>
+                <a href="lite.php">Department Login</a>
+              </div>
+            </div> 
+            <a href="subabout.html">SERVICES</a>
+            
+              
+            
+        </div>    
+		<div class="message">
+      <h1 style="font-family: Goudy Old Style;">TELECOM </h1>
+      <h5 style="font-family: Segoe Script;">Powered By SIZO</h5>
+      <br>
+		    <h4 style="font-family: Segoe Script;">No bots. Just dedicated customer care.</h4>
+        <div>
+            <button type="button" class="mb"><a href="#read">EXPLORE MORE →</a></button>
+        
+            <button type="button" class="mb"><a href="https://docs.google.com/forms/d/e/1FAIpQLSclOibbQJSfmd_3e7SMg2j3kt9U-d5ky08Kxs3bpBn2Tk78Wg/viewform">CONTACT US ☎</a></button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+       
+        <br>
+        <br>
+        <br>
+        <h2 style="font-family: Segoe Script; color: #fff;" >Companies Associated With Telecom</h2>
+<div class="ser">
+              
+            <div class="bx">
+                <div class="icon">01</div>
+                <div class="cont" >
+                    <h3>Cosmos</h3>
+                    <p>Cosmos offers internet services with amazing service packages. Which Covers moderate number of areas.<br> <br></p>
+                    <a href="cosmos.html" class="are" >Read More</a>
+                </div>
+            </div>
+        <br>
+        <div>
+            <div class="bx">
+                <div class="icon">02</div>
+                <div class="cont">
+                    <h3>Phoenix</h3>
+                    <p> In addition to providing internet Phoenix also provides cable TV and phone services, which may come in bundles or standalone plans.</p>
+                    <a href="phoenix.html"  class="are">Read More</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div>
+                  <div class="bx">
+                    <div class="icon">03</div>
+                    <div class="cont">
+                        <h3>Antennae</h3>
+                        <p>Antennae offers digital TV, digital landline phone service, and satellite TV via DirecTV.</p>
+                        <a href="antennae.html" class="are">Read More</a>
+                    </div>
+                </div>
+            </div>
+        <br>
+        
+   
+
+</div>
+<a name="read" ></a>
+<h2 style="font-family: Segoe Script; color: #fff;" > Latest Update</h2>
+
+<div class="ser2">
+        <div class="box">
+            <div class="icon">01</div>
+            <div class="cont">
+                <h3>Airtel And Vi speeds</h3>
+                <p>Airtel offers better download speed, latency; Vodafone Idea leads in upload speeds: Report </p>
+                
+            </div>
+        </div>
+    <br>
+    <div>
+        <div class="box">
+            <div class="icon">02</div>
+            <div class="cont">
+                <h3>JioPhone</h3>
+                <p> ‘Jio exclusive’ smartphones to hit market as telco looks to convert JioPhone users</p>
+              
+            </div>
+        </div>
+    </div>
+    <br>
+    <div>
+              <div class="box">
+                <div class="icon">03</div>
+                <div class="cont">
+                    <h3>AGR dues with Vi</h3>
+                    <p>Vodafone Idea moves SC, pointing out calculation errors in AGR dues</p>
+                    
+                </div>
+            </div>
+        </div>
+    <br>
+    
+
+
+</div>  
+        <br>
+        <div class="prnt">
+            <h2 style="font-family: Segoe Script; color: #fff;  "> -⚬○[ Meet Our Team ]○⚬-</h2>
+              <div class="team">
+                    <div class="teammem">
+                                <h3>Simrah Ayan Fathima</h3>
+                                <p class="role">1RG18CS056</p> 
+                                <p></p>       
+                    </div>
+                    <div class="teammem">
+                                <h3> Syeda Zohra Tazeen </h3>
+                                <p class="role">1RG18CS062</p>
+                                <p></p>
+                    </div>
+              </div>
+        </div>
+      </div>
+    
+    </div>
+</header>
+</body>
+</html>

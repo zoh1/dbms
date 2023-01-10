@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  user-select: none;
+  text-decoration: none;
+  font-family: Goudy Old Style;
+}
+body{
+ background: #9e81af;
+ background-image: url(image2.jpg);
+ 
+}
+.parnt{
+    display: flex;
+    position: relative;
+}
+.parnt .sb{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    left: 0;
+   
+    background: #201831;
+    padding: 30px 0;
+}
+.parnt .sb h2{
+   color:#fff;
+   cursor: pointer;
+   font-size: 25px;
+   text-transform: uppercase;
+   font-weight: 600;
+   line-height: 25px;
+   text-align: center;
+   margin-bottom: 30px;
+}
+ .sb ul li{
+    padding: 20px;
+    border-bottom: 2px solid  rgba(225,225,225,0.05);
+    line-height: 30px;
+    border-left: 3px solid transparent;
+ }
+.parnt .sb ul li a{
+   color: #bdb8d7;
+   display: block;
+   text-decoration: none;
+   font-size: 18px;
+   padding-left: 25px;
+   width: 100%;
+   position: relative;
+  
+}
+.parnt .sb ul li a .fas{
+    width: 30px;
+
+}
+.parnt .sb ul li:hover{
+    background: #7e769c;
+    border-left-color: white;
+   
+}
+.parnt .sb ul li:hover a{
+    color: #fff;
+    background: #7e769c;
+
+ }
+.parnt .cont{
+   width: 100%;
+   margin-left: 250px;
+}
+.parnt .cont .headr{
+  padding: 20px;
+    background: thistle;
+    color: #201831;
+    font-size: 30px;
+    cursor: pointer;
+    border-bottom: 3px solid #201831;
+}
+.bx{
+  position: relative;
+  width: 90%;
+  padding: 50px;
+ background: thistle;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+ font-size: 25px;
+   border-radius: 2px;
+   margin: 30px;
+   border: 2px solid #201831;
+   overflow: hidden;
+   text-align: center;
+}
+.are{
+        display: inline-block;
+        padding: 12px 20px;
+        background: #fff;
+        border-radius: 30px;
+        text-decoration: none;
+        color: #000;
+        border: 1px solid black;
+        font-weight: 500;
+        margin-top: 20px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        
+}
+.are:hover{
+    background-color: thistle;
+    color: #16384c;
+}
+.search{
+        font-size: 25px;
+        position: relative;
+        padding: 20px;
+        display: inline-block;
+        margin: 5px;
+}
+.lol{
+        
+        position:relative;
+        width: 235px;
+        transition: 0.5s;
+        padding:4px 0;
+        margin:1px 1px;
+        border-left:0;
+        border-top:0;
+        border-right:0;
+        border-bottom:1px solid #999;
+        outline:none;
+        background:transparent;
+        font-size: 20px;
+    }
+    .para {
+   
+   margin-left: 50px;
+}
+
+
+ </style>
+    <meta charset="utf-8">
+    <title >SIZO TELECOMMUNICATIONS</title>
+    <script src="https://kit.fontawesome.com/f04db26bb7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="parnt">
+        <div class="sb">
+                <h2>My Account</h2>
+                <ul>
+                    <li><a href="customerhome.html"><i class="fas fa-home"></i>HOME</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i>DASHBOARD</a></li>
+                   
+                    <li><a href="afterlogout.html"><i class="fas fa-sign-out-alt"></i>LOGOUT</a></li>
+                    <li><a href="feedback.php"><i class="fas fa-comments"></i>FEEDBACK</a></li>
+                </ul>
+                
+        </div>
+            <div class="cont">
+                <div class="headr">WELCOME</div><?php echo >
+  
+                <div class="para">
+                   
+                    <div class="bx">
+                        <h3>Cosmos</h3>
+                        <p>Cosmos offers internet services with amazing service packages. Which Covers moderate number of areas. </p>
+                        <a href="recharge.php" class="are">Recharge</a>
+
+                    </div>
+                    <div class="bx">
+                        <h3>Phoenix</h3>
+                        <p> In addition to providing internet Phoenix also provides cable TV and phone services, which may come in bundles or standalone plans.</p>
+                        <a href="phoenixrecharge.html" class="are">Recharge</a>
+
+                    </div>
+                    <div class="bx">
+
+                        <h3>Antennae</h3>
+                        <p>Antennae offers digital TV, digital landline phone service, and satellite TV via DirecTV.</p>
+                        <a href="antennaerecharge.html" class="are">Recharge</a>
+
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</body>
+</html>
